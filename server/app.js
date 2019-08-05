@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // imports
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const schema = require('./schema/schema.js');
 
 // connect to mongoDB instance

@@ -1,2 +1,9 @@
 # GraphQL Bookshelf
-Implementation of a graphQL/node.js server w/ React frontend using freecodecamp's graphQL course.
+Implementation of a graphQL server using freecodecamp's graphQL course.
+
+Utilizes: 
+- GraphQL
+- React
+- Apollo
+- Express
+- MongoDB
