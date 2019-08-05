@@ -1,16 +1,27 @@
+// import dependencies
 require('dotenv');
-const PORT = process.env.PORT || 3000;
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
+const mongoose = require('mongoose');
+const app = express();
+
+// imports
+const PORT = process.env.PORT || 3000;
 const schema = require('./schema/schema.js');
 
-const app = express();
+// connect to mongoDB instance
+mongoose.connect('mongodb+srv://cory:12345@cluster0-2ljdf.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connection.once('open', () => {
+    console.log('Connected to MongoDB');
+});
 
 app.use('/graphql', graphqlHTTP({
     schema: schema,
     graphiql: true,    
 }));
 
+
+// start server
 app.listen(PORT, () =>
     console.log(`Server running on ${PORT}`)
 );
