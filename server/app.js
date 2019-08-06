@@ -4,10 +4,14 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const mongoose = require('mongoose');
 const app = express();
+const cors = require('cors');
 
 // imports
 const PORT = process.env.PORT || 4000;
 const schema = require('./schema/schema.js');
+
+//allow cross origin requests
+app.use(cors());
 
 // connect to mongoDB instance
 mongoose.connect('mongodb+srv://cory:12345@cluster0-2ljdf.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
