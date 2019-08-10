@@ -1,5 +1,5 @@
 # GraphQL Bookshelf
-Implementation of a graphQL server using freecodecamp's graphQL course.
+Implementation of a graphQL server with React front-end using freecodecamp's graphQL course.
 
 Utilizes: 
 - GraphQL
