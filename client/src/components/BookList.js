@@ -10,12 +10,11 @@ class BookList extends Component{
       return(<div>Loading Books...</div>)
     } else {
       return this.props.data.books.map(book => {
-        return(<li key={book._id}>{book.name}</li>)
+        return(<li key={book.id}>{book.name}</li>)
       })
     }
   }
     render(){
-      console.log(this.props);
         return(
           <div>
             <ul id="book-list">
